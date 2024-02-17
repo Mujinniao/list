@@ -19,14 +19,13 @@ curl -o abp11.txt https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-lis
 curl -o abp12.txt https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
 curl -o abp13.txt https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt
 
+cat adg*.txt | sort -u | sed -e '/^#/d' -e '/^$/d' > adgm.txt
 
-cat adg*.txt | sort -u | sed '/^#/d' > adgm.txt
-
-cat abp*.txt | sort -u | sed -e '/^\[/d' -e '/^!/d' > abpm.txt  
+cat abp*.txt | sort -u | sed -e '/^\[/d' -e '/^!/d' -e '/^$/d' > abpm.txt  
 
 cat adgm.txt abpm.txt | sort -u > adall.txt
 
-grep '^@@' adall.txt > white.txt && sed -i '/^@@/d' adall.txt
+grep '^@@' adall.txt > white.txt && sed -i -e '/^@@/d' -e '/^$/d' adall.txt
 
 sed -i -e 's/\$important$//' -e 's/^@@//' white.txt
 
@@ -38,7 +37,7 @@ comm -23 adall.txt white.txt > temp.txt && mv temp.txt adall.txt
 
 grep -e '^||' -e '^0.0.0.0' -e '^127.0.0.1' adall.txt > domain.txt
 
-sed -i -e '/\//d' -e '/\$popup/d' -e '/\$third-party/d' -e '/\$domain/d' -e '/\$redirect/d' -e '/\$script/d' -e '/\$~image/d' -e '/,third-party/d' -e '/\$image/d' -e '/\^\*/d' -e '/\$csp/d' -e '/\$media/d' -e '/\$removeheader/d' -e '/\$subdocument/d' -e '/\$object/d' -e '/\$xhr/d' -e '/\$cookie/d' -e '/\$all/d' -e '/\$xmlhttprequest/d' -e '/\$document/d' -e '/domain=/d' -e '/\$~stylesheet/d' -e '/\$removeparam/d' -e '/\$websocket/d' -e '/\$~third-party/d' -e '/\$inline-script/d' domain.txt
+sed -i -e '/\//d' -e '/\$popup/d' -e '/\$third-party/d' -e '/\$domain/d' -e '/\$redirect/d' -e '/\$script/d' -e '/\$~image/d' -e '/,third-party/d' -e '/\$image/d' -e '/\^\*/d' -e '/\$csp/d' -e '/\$media/d' -e '/\$removeheader/d' -e '/\$subdocument/d' -e '/\$object/d' -e '/\$xhr/d' -e '/\$cookie/d' -e '/\$all/d' -e '/\$xmlhttprequest/d' -e '/\$document/d' -e '/domain=/d' -e '/\$~stylesheet/d' -e '/\$removeparam/d' -e '/\$websocket/d' -e '/\$~third-party/d' -e '/\$inline-script/d' -e '/^$/d' domain.txt
 
 sort adall.txt -o adall.txt
 
