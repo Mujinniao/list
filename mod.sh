@@ -19,7 +19,7 @@ curl -o abp11.txt https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-lis
 curl -o abp12.txt https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
 curl -o abp13.txt https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt
 
-cat adg*.txt | sort -u | sed -e '/^#/d' -e '/^$/d' > adgm.txt
+cat adg*.txt | sort -u | sed -e 's/#.*//' -e '/^$/d' > adgm.txt
 
 cat abp*.txt | sort -u | sed -e '/^\[/d' -e '/^!/d' -e '/^$/d' > abpm.txt  
 
@@ -49,8 +49,6 @@ rm adg*.txt abp*.txt white.txt
 
 
 
-#grep -vf white.txt adall.txt > temp.txt && mv temp.txt adall.txt
-#grep -vf domain.txt adall.txt > modify.txt
 
 
 
