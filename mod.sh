@@ -47,10 +47,9 @@ comm -23 adall.txt domain.txt > modify.txt
 
 rm adg*.txt abp*.txt white.txt
 
+cat add.txt >> domain.txt
 
-
-
-
+sed -e '/\*/d' -e 's/0.0.0.0 //' -e 's/127.0.0.1 //' -e 's/||//' -e 's/\^.*//' -e 's/^/domain:/' domain.txt > mos.txt
 
 
 
