@@ -27,17 +27,19 @@ cat adgm.txt abpm.txt | sort -u > adall.txt
 
 grep '^@@' adall.txt > white.txt && sed -i -e '/^@@/d' -e '/^$/d' adall.txt
 
-sed -i -e 's/\$important$//' -e 's/^@@//' white.txt
+sed -i -e 's/\$important$//' -e 's/^@@//' -e 's/^||/|/' -e 's/^|/||/' white.txt
 
-sort adall.txt -o adall.txt
+# sort adall.txt -o adall.txt
 
-sort white.txt -o white.txt
+# sort white.txt -o white.txt
 
-comm -23 adall.txt white.txt > temp.txt && mv temp.txt adall.txt
+grep -v -F -f white.txt adall.txt > temp.txt && mv temp.txt adall.txt
+
+# comm -23 adall.txt white.txt > temp.txt && mv temp.txt adall.txt
 
 grep -e '^||' -e '^0.0.0.0' -e '^127.0.0.1' adall.txt > domain.txt
 
-sed -i -e '/\//d' -e '/\$popup/d' -e '/\$third-party/d' -e '/\$domain/d' -e '/\$redirect/d' -e '/\$script/d' -e '/\$~image/d' -e '/,third-party/d' -e '/\$image/d' -e '/\^\*/d' -e '/\$csp/d' -e '/\$media/d' -e '/\$removeheader/d' -e '/\$subdocument/d' -e '/\$object/d' -e '/\$xhr/d' -e '/\$cookie/d' -e '/\$all/d' -e '/\$xmlhttprequest/d' -e '/\$document/d' -e '/domain=/d' -e '/\$~stylesheet/d' -e '/\$removeparam/d' -e '/\$websocket/d' -e '/\$~third-party/d' -e '/\$inline-script/d' -e '/^$/d' domain.txt
+sed -i -e '/\//d' -e '/\$popup/d' -e '/\$third-party/d' -e '/\$domain/d' -e '/\$redirect/d' -e '/\$script/d' -e '/\$~image/d' -e '/,third-party/d' -e '/\$image/d' -e '/\^\*/d' -e '/\$csp/d' -e '/\$media/d' -e '/\$removeheader/d' -e '/\$subdocument/d' -e '/\$object/d' -e '/\$xhr/d' -e '/\$cookie/d' -e '/\$all/d' -e '/\$xmlhttprequest/d' -e '/\$document/d' -e '/domain=/d' -e '/\$~stylesheet/d' -e '/\$removeparam/d' -e '/\$websocket/d' -e '/\$~third-party/d' -e '/\$inline-script/d' -e '/\$app/d' -e '/\$header/d' -e '/\$match-case/d' -e '/\$method/d' -e '/\$to/d' -e '/^$/d' domain.txt
 
 sort adall.txt -o adall.txt
 
@@ -47,7 +49,7 @@ comm -23 adall.txt domain.txt > modify.txt
 
 rm adg*.txt abp*.txt white.txt
 
-cat add.txt >> domain.txt
+cat ./extra/add.txt >> domain.txt
 
 sed -e '/\*/d' -e 's/0.0.0.0 //' -e 's/127.0.0.1 //' -e 's/||//' -e 's/\^.*//' -e 's/^/domain:/' domain.txt > mos.txt
 
