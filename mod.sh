@@ -11,20 +11,20 @@ curl -o abp7.txt https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/mas
 curl -o abp8.txt https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/rule.txt
 curl -o abp9.txt https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 curl -o abp10.txt https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt
-curl -o abp11.txt https://raw.githubusercontent.com/uBlockOrigin/uAssets/gh-pages/filters/filters.min.txt
-curl -o abp12.txt https://raw.githubusercontent.com/uBlockOrigin/uAssets/gh-pages/filters/privacy.min.txt
-curl -o abp13.txt https://raw.githubusercontent.com/uBlockOrigin/uAssets/gh-pages/filters/badware.txt
-curl -o abp14.txt https://raw.githubusercontent.com/uBlockOrigin/uAssets/gh-pages/filters/quick-fixes.txt
-curl -o abp15.txt https://raw.githubusercontent.com/uBlockOrigin/uAssets/gh-pages/filters/unbreak.txt
+# curl -o abp11.txt https://raw.githubusercontent.com/uBlockOrigin/uAssets/gh-pages/filters/filters.min.txt
+# curl -o abp12.txt https://raw.githubusercontent.com/uBlockOrigin/uAssets/gh-pages/filters/privacy.min.txt
+# curl -o abp13.txt https://raw.githubusercontent.com/uBlockOrigin/uAssets/gh-pages/filters/badware.txt
+# curl -o abp14.txt https://raw.githubusercontent.com/uBlockOrigin/uAssets/gh-pages/filters/quick-fixes.txt
+# curl -o abp15.txt https://raw.githubusercontent.com/uBlockOrigin/uAssets/gh-pages/filters/unbreak.txt
 curl -o abp16.txt https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt
 curl -o abp17.txt https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
 curl -o abp18.txt https://raw.githubusercontent.com/Spam404/lists/master/adblock-list.txt
-curl -o abp19.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt
-curl -o abp20.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers_firstparty.txt
-curl -o abp21.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/foreign.txt
-curl -o abp22.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
-curl -o abp23.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/ChineseFilter/sections/adservers.txt
-curl -o abp24.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/ChineseFilter/sections/adservers_firstparty.txt
+# curl -o abp19.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt
+# curl -o abp20.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers_firstparty.txt
+# curl -o abp21.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/foreign.txt
+# curl -o abp22.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
+# curl -o abp23.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/ChineseFilter/sections/adservers.txt
+# curl -o abp24.txt https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/ChineseFilter/sections/adservers_firstparty.txt
 
 curl -o adg1.txt https://raw.githubusercontent.com/ilpl/ad-hosts/master/hosts
 curl -o adg2.txt https://raw.githubusercontent.com/ilpl/ad-hosts/master/filter.txt
