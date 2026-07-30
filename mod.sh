@@ -53,7 +53,7 @@ cat adall.txt | \
   grep -v '^$' | \
   sort -u > tmp && mv tmp adall.txt
 
-grep -E '^\|\|[a-zA-Z0-9.-]+\^$' adall.txt > damain.txt
+grep -E '^\|\|[a-zA-Z0-9.-]+\^$' adall.txt > domain.txt
 
 grep -v -E '^\|\|[a-zA-Z0-9.-]+\^$' adall.txt > modify.txt
 
