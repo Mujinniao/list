@@ -2,7 +2,7 @@
 
 每日由 GitHub Actions 自动合并多个广告规则源，产出面向 **sing-box** 与 **uBlock Origin** 的规则文件。任一规则源下载失败或输出异常缩水时，脚本会中止并**不会覆盖提交**，保证仓库内列表始终可用。
 
-**分支约定**：`main` 只保留维护文件（`mod.sh`、CI、`extra/add.txt`、本 README）；生成的规则文件全部在 **`data` 分支**，订阅请使用 `data` 分支地址。
+**分支约定**：`main` 只保留维护文件（`mod.sh`、CI、`extra/add.txt`、本 README），自 `1f78aed` 起恢复常规提交历史；生成的规则文件全部在 **`data` 分支**（CI 每次以无历史单提交强推），订阅请使用 `data` 分支地址。
 
 **white.txt**：本仓库不再单独产出；白名单/残余例外相关处理见 [ANOONIMASXP/MOD](https://github.com/ANOONIMASXP/MOD) 的 `mod.sh`。
 
