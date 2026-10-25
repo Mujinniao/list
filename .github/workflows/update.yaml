@@ -43,6 +43,7 @@ jobs:
         git add domain.txt modify.txt adall.txt
 
         NEW_TREE=$(git write-tree)
+        OLD_COMMIT=$(git rev-parse --verify origin/data 2>/dev/null || true)
         OLD_TREE=$(git rev-parse --verify origin/data^{tree} 2>/dev/null || true)
 
         if [ -n "$OLD_TREE" ] && [ "$NEW_TREE" = "$OLD_TREE" ]; then
@@ -50,14 +51,18 @@ jobs:
           exit 0
         fi
 
-        if [ -n "$OLD_TREE" ]; then
-          PARENT=$(git commit-tree "$OLD_TREE" -m "snapshot")
-          CHILD=$(git commit-tree "$NEW_TREE" -p "$PARENT" -m "update")
-        else
+        if [ -z "$OLD_COMMIT" ]; then
           CHILD=$(git commit-tree "$NEW_TREE" -m "update")
+          git push origin "$CHILD:refs/heads/data"
+        elif [ "$(git log -1 --format=%cd --date=format:%Y-%m "$OLD_COMMIT")" != "$(date -u +%Y-%m)" ]; then
+          # 月度清理：tip 仍属上月或更早 → 压成 1 条并强推
+          CHILD=$(git commit-tree "$NEW_TREE" -m "update")
+          git push -f origin "$CHILD:refs/heads/data"
+        else
+          # 当月正常追加
+          CHILD=$(git commit-tree "$NEW_TREE" -p "$OLD_COMMIT" -m "update")
+          git push origin "$CHILD:refs/heads/data"
         fi
-
-        git push -f origin "$CHILD:refs/heads/data"
 
     - name: Delete Workflow Runs
       uses: Mattraks/delete-workflow-runs@v2
