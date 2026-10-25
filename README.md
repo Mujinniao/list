@@ -4,8 +4,6 @@
 
 **分支约定**：`main` 只保留维护文件（`mod.sh`、CI、`extra/add.txt`、本 README），自 `1f78aed` 起恢复常规提交历史；生成的规则文件全部在 **`data` 分支**（CI 每次以无历史单提交强推），订阅请使用 `data` 分支地址。
 
-**white.txt**：本仓库不再单独产出；白名单/残余例外相关处理见 [ANOONIMASXP/MOD](https://github.com/ANOONIMASXP/MOD) 的 `mod.sh`。
-
 ## 订阅地址（data 分支）
 
 | 文件 | raw 地址 |
@@ -59,7 +57,6 @@ sing-box 配置文件为 JSON 格式，示例（`config.json` 片段）：
 注意事项：
 - 转换 `domain.txt` 为 `domain_suffix` 时**跳过 `@@` 开头的残余例外行**；`||domain^` 是 `example.com` 及其**全部子域**的拦截，与 sing-box `domain_suffix` 语义一致；
 - 转换时须保证点边界（勿用裸 `HasSuffix`，否则 `nota.com` 会被 `a.com` 误匹配）；
-- 白名单/`@@` 消费端处理见 [ANOONIMASXP/MOD](https://github.com/ANOONIMASXP/MOD)。
 
 ## uBlock Origin
 
@@ -69,7 +66,6 @@ sing-box 配置文件为 JSON 格式，示例（`config.json` 片段）：
 
 - 白名单（`@@`）**不进 `domain.txt` 的拦截部分**，一律转换为"从黑名单删除"；
 - 仅删除法无法无损兑现的域名类例外并入 `domain.txt`（`@@` 行），非域名类进 `modify.txt`；
-- 本仓库不单独产出 `white.txt`；需要独立白名单文件的场景使用 [ANOONIMASXP/MOD](https://github.com/ANOONIMASXP/MOD)；
 - 普通例外可取消不带 `$important` 的拦截规则（含带其他修饰符的）；`$important` 拦截规则只有 `$important` 例外能取消；`$client`/`$dnstype` 等作用域例外只做精确文本匹配。
 
 ## 规则语法参考
