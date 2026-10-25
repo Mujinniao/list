@@ -34,7 +34,7 @@ jobs:
         mv domain.txt modify.txt adall.txt "$OUT/"
 
         git fetch origin data:refs/remotes/origin/data || true
-        git checkout --orphan data
+        git checkout --orphan data-tmp
         git rm -rf --quiet . 2>/dev/null || true
         git clean -fdx
         cp "$OUT"/* .
@@ -42,8 +42,22 @@ jobs:
         # NOTE: 新增输出文件时必须同步加入此列表
         git add domain.txt modify.txt adall.txt
 
-        git commit -m "update"
-        git push -f origin data
+        NEW_TREE=$(git write-tree)
+        OLD_TREE=$(git rev-parse --verify origin/data^{tree} 2>/dev/null || true)
+
+        if [ -n "$OLD_TREE" ] && [ "$NEW_TREE" = "$OLD_TREE" ]; then
+          echo "No changes to commit"
+          exit 0
+        fi
+
+        if [ -n "$OLD_TREE" ]; then
+          PARENT=$(git commit-tree "$OLD_TREE" -m "snapshot")
+          CHILD=$(git commit-tree "$NEW_TREE" -p "$PARENT" -m "update")
+        else
+          CHILD=$(git commit-tree "$NEW_TREE" -m "update")
+        fi
+
+        git push -f origin "$CHILD:refs/heads/data"
 
     - name: Delete Workflow Runs
       uses: Mattraks/delete-workflow-runs@v2
