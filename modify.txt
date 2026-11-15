@@ -17712,6 +17712,7 @@
 ##body > #float-ai-wrap
 ##body > #js-adContainer.adBlock
 ##body > #loading[style="display: none;"] + noscript + #app
+##body > #rcOverlay > #rcCard
 ##body > #showcloneshengxiaon
 ##body > .app + #htmlContenthtml
 ##body > .cf-page-wrap
@@ -20698,6 +20699,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 -wps.com.cn^$doc
 -wrapper-analytics-prod.cloudfunctions.net/
 -youdao.com.cn^$doc
+.*/*?*=17$domain=av911.com|av911.tv|nikoav.com|nikoav.tv
 .*tad.cn/?c=ggmou$document
 ./M5q5.js$script
 .1.1.1.l80.js^
@@ -22917,6 +22919,7 @@ $~third-party,xmlhttprequest,script,redirect-rule=nooptext,domain=zertalious.xyz
 /17mb/scripts/shang.js$~third-party
 /17mb/scripts/xuan.js$~third-party
 /17mb/scripts/xx.js$~third-party
+/18/*f*18*?_=17$third-party,~media,~image,~stylesheet
 /1905/1905.
 /190_900.
 /190x600.
@@ -47033,6 +47036,8 @@ av6k.com##.clickadu
 av6k.com##.subLink
 av6k.com##CENTER,div[class^="ad_"],div[class^="guanggao_"]
 av6k.com#%#//scriptlet('abort-current-inline-script', 'document.write', 'ads_codes')
+av911.tv,nikoav.com,nikoav.tv##+js(rmnt, script, /ad-injected|univresalP|new window/)
+av911.tv,nikoav.com,nikoav.tv##.ad-injected
 avalanche.state.co.us##.sky_banner_ad
 avanderlee.com##span.swiftlee-ad
 avanigo.com##iframe.lazyloaded
@@ -54077,8 +54082,8 @@ coachmag.co.uk#@#.plainAd
 coachweb.com,tomshardware.com##.listingResult:has(> div.sponsored-post)
 coastalvirginiamag.com,afk.guide#%#//scriptlet('abort-on-stack-trace', 'Array.prototype.includes', 'adblockTrigger')
 coasttocoastam.com##.component-header-ad
-cobephim.fit##.sspp-area
 cobephim.icu##.sspp-area
+cobephim.ink##.sspp-area
 cochranenow.com,discoverairdrie.com,discoverhumboldt.com,portageonline.com,swiftcurrentonline.com##.inline-billboard
 cochranetimespost.ca,midnorthmonitor.com,4runner6g.com,fortmcmurraytoday.com,airdrieecho.com,calgaryherald.com,calgarysun.com,canoe.com,chathamdailynews.ca,clintonnewsrecord.com,cochranetimes.com,coldlakesun.com,communitypress.ca,countymarket.ca,countyweeklynews.ca,dailyheraldtribune.com,devondispatch.ca,draytonvalleywesternreview.com,driving.ca,edmontonexaminer.com,edmontonjournal.com,edmontonsun.com,elliotlakestandard.ca,fairviewpost.com,financialpost.com,fortmcmurraytoday.com,fortsaskatchewanrecord.com,gananoquereporter.com,goderichsignalstar.com,highrivertimes.com,kincardinenews.com,lakeshoreadvance.com,leaderpost.com,leducrep.com,lfpress.com,lucknowsentinel.com,mayerthorpefreelancer.com,melfortjournal.com,mitchelladvocate.com,napaneeguide.com,nationalpost.com,norfolkandtillsonburgnews.com,northernnews.ca,nugget.ca,ontariofarmer.com,ottawacitizen.com,ottawasun.com,parisstaronline.com,peacecountrysun.com,pembrokeobserver.com,pinchercreekecho.com,princegeorgepost.com,prrecordgazette.com,recorder.ca,saltwire.com,saultstar.com,saultthisweek.com,seaforthhuronexpositor.com,sherwoodparknews.com,shorelinebeacon.com,simcoereformer.ca,sprucegroveexaminer.com,stonyplainreporter.com,stratfordbeaconherald.com,thebeaumontnews.ca,thechronicle-online.com,thecragandcanyon.ca,theobserver.ca,theprovince.com,thestarphoenix.com,thewhig.com,tj.news,todaysfarmer.ca,vulcanadvocate.com,wallaceburgcourierpress.com,wetaskiwintimes.com,whitecourtstar.com,wiartonecho.com,woodstocksentinelreview.com##section[aria-describedby^="advertisment"]
 cochranetimespost.ca,midnorthmonitor.com,timminspress.com,stthomastimesjournal.com,thepost.on.ca,thesudburystar.com,windsorstar.com,vermilionstandard.com,nantonnews.com,vancouversun.com,hannaherald.com,4runner6g.com,fortmcmurraytoday.com,airdrieecho.com,calgaryherald.com,calgarysun.com,canoe.com,chathamdailynews.ca,clintonnewsrecord.com,cochranetimes.com,coldlakesun.com,communitypress.ca,countymarket.ca,countyweeklynews.ca,dailyheraldtribune.com,devondispatch.ca,draytonvalleywesternreview.com,driving.ca,edmontonexaminer.com,edmontonjournal.com,edmontonsun.com,elliotlakestandard.ca,fairviewpost.com,financialpost.com,fortmcmurraytoday.com,fortsaskatchewanrecord.com,gananoquereporter.com,goderichsignalstar.com,highrivertimes.com,kincardinenews.com,lakeshoreadvance.com,leaderpost.com,leducrep.com,lfpress.com,lucknowsentinel.com,mayerthorpefreelancer.com,melfortjournal.com,mitchelladvocate.com,napaneeguide.com,nationalpost.com,norfolkandtillsonburgnews.com,northernnews.ca,nugget.ca,ontariofarmer.com,ottawacitizen.com,ottawasun.com,parisstaronline.com,peacecountrysun.com,pembrokeobserver.com,pinchercreekecho.com,princegeorgepost.com,prrecordgazette.com,recorder.ca,saltwire.com,saultstar.com,saultthisweek.com,seaforthhuronexpositor.com,sherwoodparknews.com,shorelinebeacon.com,simcoereformer.ca,sprucegroveexaminer.com,stonyplainreporter.com,stratfordbeaconherald.com,thebeaumontnews.ca,thechronicle-online.com,thecragandcanyon.ca,theobserver.ca,theprovince.com,thestarphoenix.com,thewhig.com,tj.news,todaysfarmer.ca,vulcanadvocate.com,wallaceburgcourierpress.com,wetaskiwintimes.com,whitecourtstar.com,wiartonecho.com,woodstocksentinelreview.com##.widget--local-business
@@ -64100,6 +64105,8 @@ fox.com,foxweather.com,foxsports.com#%#//scriptlet('json-prune', 'ads')
 fox.com,foxweather.com,foxsports.com#%#//scriptlet('m3u-prune', '/#UPLYNK-SEGMENT:.*,ad/', '.m3u8')
 fox10phoenix.com,fox13news.com,fox26houston.com,fox29.com,fox2detroit.com,fox32chicago.com,fox35orlando.com,fox4news.com,fox5atlanta.com,fox5dc.com,fox5ny.com,fox6now.com,fox7austin.com,fox9.com,foxbusiness.com,foxla.com,foxnews.com,ktvu.com,q13fox.com,wogx.com##.vendor-unit
 fox10phoenix.com,fox13news.com,fox26houston.com,fox29.com,fox2detroit.com,fox32chicago.com,fox35orlando.com,fox4news.com,fox5atlanta.com,fox5dc.com,fox5ny.com,fox6now.com,fox7austin.com,fox9.com,foxbusiness.com,foxla.com,foxnews.com,ktvu.com,wogx.com##.vendor-unit
+fox11online.com,news4sanantonio.com##div[class*="_taboolaDeeperDive"]
+fox11online.com,news4sanantonio.com##div[class^="UserCommenting_commentingAd"]
 fox11online.com,weartv.com##div[class^="StoryPage_taboolaDeeperDive"]
 fox11online.com,weartv.com##div[class^="UserCommenting_commentingAd"]
 fox4news.com##.fox-bet-promo
@@ -70239,6 +70246,7 @@ historiapoznania.pl,pcformat.pl,parenting.pl,informacje.wp.pl,deliciousmagazine.
 historic-uk.com#?#.article-sidebar:contains(Advertisement)
 historic-uk.com#?#.article-sidebar:has-text(Advertisement)
 historicaerials.com###bot_container
+historicaerials.com###historicaerials_g_728x90_ATF
 historicaerials.com###top_container
 historicaerials.com##+js(abort-current-script, EventTarget.prototype.addEventListener, googletag.pubads)
 historicaerials.com##+js(aeld, load, showFallbackModal)
@@ -71513,7 +71521,12 @@ iamgujarat.com##style[type="text/css"] + div[class]:not([id]):not([style]):not([
 iamgujarat.com,eisamay.com,samayam.com,vijaykarnataka.com,indiatimes.com##.advertorialwrapper
 iamgujarat.com,eisamay.com,samayam.com,vijaykarnataka.com,indiatimes.com##.wdt-taboola
 iamgujarat.com,eisamay.com,samayam.com,vijaykarnataka.com,indiatimes.com##div[class="news-card col4"]
+iamgujarat.com,indiatimes.com,maharashtratimes.com,navbharattimes.indiatimes.com,samayam.com,telugu.samayam.com,vijaykarnataka.com##.fbnad
+iamgujarat.com,indiatimes.com,samayam.com,maharashtratimes.com##.mid-home-new-personalisation-taboola
+iamgujarat.com,indiatimes.com,samayam.com,maharashtratimes.com##.mid-taboola
 iamgujarat.com,indiatimes.com,samayam.com,vijaykarnataka.com##.colombia
+iamgujarat.com,indiatimes.com,samayam.com,vijaykarnataka.com##div[class^="mrec"]
+iamgujarat.com,indiatimes.com,vijaykarnataka.com,maharashtratimes.com##.carousalad
 ians.in##.add-inner
 ianseo.net#@#.ad-container
 ianseo.net#@#.ad-left
@@ -86077,7 +86090,6 @@ navbharattimes.indiatimes.com##.eoa-deals
 navbharattimes.indiatimes.com##.top-atf-wrapper
 navbharattimes.indiatimes.com#$#body.disable-scroll { overflow: auto!important; margin-right: 0!important; }
 navbharattimes.indiatimes.com#?#.leftmain > div[style] ~ div[class*=" "]:has(> div > div > a[onclick])
-navbharattimes.indiatimes.com,telugu.samayam.com##.fbnad
 navbharattimes.indiatimes.com,timesofindia.indiatimes.com##div[id^="div-clmb-ctn"]
 naver.com##._promotionBanner,._banner
 naver.com#@#.head_ad
@@ -86982,8 +86994,6 @@ news24online.com##.desktop_new_ads
 news24online.com##.mini-list-story[style*="background: red;"]
 news24online.com##.n24_ads_div_title
 news365.co.za##.stream-item-widget-content
-news4sanantonio.com##div[class*="_taboolaDeeperDive"]
-news4sanantonio.com##div[class^="UserCommenting_commentingAd"]
 news4vip.livedoor.biz###f984a
 news4vip.livedoor.biz##img[src^="//ir-jp.amazon-adsystem.com/"]
 news4vip.livedoor.biz##span[style="display: block; margin: 12px auto;"]
@@ -105823,6 +105833,7 @@ timesofindia.indiatimes.com##.fixed_elements_on_page
 timesofindia.indiatimes.com##.fromaroundwebrhs
 timesofindia.indiatimes.com##.icNFc
 timesofindia.indiatimes.com##.imageBanner
+timesofindia.indiatimes.com##.js_tbl_article ~ div[class]:not([id]):has(> div.wdt-taboola[onclick="stpPgtn(event)"])
 timesofindia.indiatimes.com##.l0TBl
 timesofindia.indiatimes.com##.main-paisa
 timesofindia.indiatimes.com##.mgid_second_mrec_parent
@@ -105839,6 +105850,7 @@ timesofindia.indiatimes.com##.stickymrecad
 timesofindia.indiatimes.com##.taboola_ad_mid
 timesofindia.indiatimes.com##.toi-amazon
 timesofindia.indiatimes.com##.topBand_adwrapper
+timesofindia.indiatimes.com##.wrapperclearfix > div[class] > div[class]:not([id]) > div[data-translate-id="cw"]:has(> div:is(div[id^="div-gpt-ad"], .taboolaBtmVsAd))
 timesofindia.indiatimes.com##[class]:has(> .wdt-taboola)
 timesofindia.indiatimes.com##[data-aff-type]
 timesofindia.indiatimes.com##[data-contentprimestatus]
@@ -114110,6 +114122,7 @@ x-sou.com##a[href^="https://xgetapp.com/"]
 x-x-x.tube###inpage-ad-container
 x-x-x.tube#%#//scriptlet('prevent-popads-net')
 x-x-x.video##a[target="_blank"]:not([href*="x-x-x.video"]):not([href^="/"])
+x.com##[id^="urt"] > ul > li:has([class^="group-has-\[\[data-ad-disclosure"])
 x.com##[id^="urt"]>ul>li:has([class*="data-ad-disclosure"])
 x.com,twitter.com##div[data-testid="trend"]:has(> div[class]:only-child svg + span)
 x.com,twitter.com#?#div[style^="transform"] h2 > div[style^="-webkit-line-clamp"] > span:contains(/^(?:Promoted Post|Promowany Post|Post promovat|プロモポスト)$/):upward(3)
@@ -117970,6 +117983,7 @@ zzzyk.com###Tinfo
 ||*stun.kugou.com^
 ||*tsdk.vivo.com.cn^
 ||*two-gun-volley.pages.dev^
+||*ui4pdu*.*$third-party,~media,~image,~stylesheet
 ||*us*watcab*.blob.core.windows.net^
 ||*xav.*/guang/*.gif
 ||*xav.*/guang/*.jpg
@@ -119718,6 +119732,7 @@ zzzyk.com###Tinfo
 ||8se.me/service/assets/core-state.
 ||8senjya.jp^$doc
 ||8teenxxx.com/adboom.php
+||8ui4pdu12.cc^$third-party,~media,~image,~stylesheet
 ||8vod.net/detail/$script
 ||8xbook.org/scripts/ad/
 ||8xsk.*/foot.php
@@ -123056,6 +123071,7 @@ zzzyk.com###Tinfo
 ||av6k.com/templets/
 ||av6k.com/templets/default/parts/
 ||av6k.com/video-ads/
+||av911.*/modules/contrib/
 ||av99.us/player/ad.
 ||availautomobile.com^$doc
 ||avantajados.com^$domain=curto.win
@@ -132242,6 +132258,7 @@ zzzyk.com###Tinfo
 ||glzy8.com/img/ceo/js.js
 ||gm-it.consulting^$third-party
 ||gm99.com^$third-party
+||gmai.com^$all
 ||gmarket.co.kr/js/common/uuid.js
 ||gmatch.jp^$doc
 ||gmbbk.com/bbsgmbbk/
@@ -139181,6 +139198,7 @@ zzzyk.com###Tinfo
 ||microsoft-notifcation.com^$all
 ||microsoft-update.support^$all
 ||microsoft-verify.glitch.me^$all
+||microsoft-winupdate.com^$all
 ||microsoft.com/echo/etc.clientlibs/microsoft/clientlibs/exp-analytics/
 ||microsofthotmailsi1.wixsite.com^$all
 ||microsoftupdate67.wixsite.com^$all
@@ -140642,6 +140660,7 @@ zzzyk.com###Tinfo
 ||nextyourcontent.com^$all
 ||nextyourcontent.com^$popup
 ||nexusbloom.xyz^$document
+||nexusmcds.com^$doc
 ||nexusmops.com^$doc
 ||nexvelar.b-cdn.net/videoplayback_.mp4
 ||nexx.cloud/play/beacon.
@@ -140725,6 +140744,7 @@ zzzyk.com###Tinfo
 ||nikkei.com/.resources/tracking/
 ||nikktech.com/main/images/banners/
 ||niknok.ru/count.asp?
+||nikoav.*/modules/contrib/
 ||nikonrumors.com/wp-content/uploads/2020/05/CaptureOne-Nikon-banner.jpg
 ||nikopik.com/wp-content/themes/*/js/nikopik.js
 ||nikutjyjgchr*.b-cdn.net^$doc
@@ -146018,6 +146038,7 @@ zzzyk.com###Tinfo
 ||securecloud-sml.com^$popup
 ||secureclouddt-cd.com^$popup
 ||secured.dailymail.co.uk/feeds/commercial/topVideos.json
+||securedoc.*.workers.dev^$doc
 ||securedsmcd.com^$popup
 ||securedt-sm.com^$popup
 ||securegfm.com^$popup
@@ -146441,7 +146462,6 @@ zzzyk.com###Tinfo
 ||shared.ydstatic.com/js/yadk/*
 ||shared.ydstatic.com/js/yatdk/*
 ||shared.youdao.com/dao/search/outweb/js/
-||sharedrop.io^$all
 ||shareholder.com/track/
 ||shareit.com/affiliate.html$third-party
 ||sharemedia.rs^$third-party
@@ -147165,7 +147185,6 @@ zzzyk.com###Tinfo
 ||snapchat.com/web/metrics
 ||snapcheat16s.com^$popup
 ||snapdeal.biz^$third-party
-||snapdrop.net^$all
 ||snapkit.com/v1/sdk/metrics/
 ||snapnsfw.com/i/snapshot/gif/$image
 ||snapnsfw.com/i/snapshot/snap/$image
@@ -148476,6 +148495,7 @@ zzzyk.com###Tinfo
 ||sultrytraffic.com^$third-party
 ||sumaity.com/ui/utility/sp/images/bnr/
 ||sumatra.ai^$third-party
+||sumatrapdf.org^$all
 ||sumatuma.com^$doc
 ||summertisaridicu.org^$popup
 ||sumo.com^$third-party
@@ -148783,6 +148803,7 @@ zzzyk.com###Tinfo
 ||t.pzc.nl^$image
 ||t.tubantia.nl^$image
 ||t.visx.net^$third-party
+||t.xmgxxq.com^$third-party,~media,~image,~stylesheet
 ||t.yzwr588.com^$third-party
 ||t1.daumcdn.net/*/static/kp.js
 ||t1.daumcdn.net/adfit/static/ad.min.js
@@ -153530,6 +153551,7 @@ zzzyk.com###Tinfo
 ||xmatch.com^$popup
 ||xmcimg.com/js/m.js
 ||xmfish.com/shw/$script
+||xmgxxq.*$third-party,~media,~image,~stylesheet
 ||xmilf.com/0eckuwtxfr/
 ||xmindchina.
 ||xml-api.online^$popup
